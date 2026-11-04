@@ -1,0 +1,4 @@
+*.rbxl binary
+*.rbxlx text eol=lf
+*.luau text eol=lf
+*.md text eol=lf
