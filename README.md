@@ -2,6 +2,24 @@
 
 Зимние гонки на тюбинге в Roblox.
 
+## Общий Codex-плагин Roblox Standards
+
+В `plugins/roblox-standards` находится независимый от игры плагин общих
+паттернов Roblox. В нём шесть skills: инициализация общих файлов,
+настройка проекта, интерфейсы, окружение, эффекты и тестирование. Документация и шаблоны устанавливаются
+вместе с пакетом. Каталог: `.agents/plugins/marketplace.json`.
+
+[Установка, использование и публикация плагина](plugins/roblox-standards/README.md).
+
+После загрузки этих файлов на GitHub участники смогут подключить пакет:
+
+```sh
+codex plugin marketplace add bobkovIBAS/Firstgame --ref main --sparse .agents/plugins --sparse plugins/roblox-standards
+codex plugin add roblox-standards@roblox-dev-kit
+```
+
+Для локальной проверки из этой папки используйте `codex plugin marketplace add .`.
+
 ## Открыть проект
 
 В Roblox Studio выберите **File → Open from File** и откройте `Firstgame.rbxl`.

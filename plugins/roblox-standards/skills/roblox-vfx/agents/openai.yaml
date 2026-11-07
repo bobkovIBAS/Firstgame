@@ -1,0 +1,4 @@
+interface:
+  display_name: "Roblox: эффекты"
+  short_description: "Следы, частицы и визуальные пресеты Roblox"
+  default_prompt: "Используй $roblox-vfx для настройки эффекта с учётом камеры и стиля проекта."

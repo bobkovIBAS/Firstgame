@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/init_project.py\" --hook",
+            "timeout": 10,
+            "additionalContextLimit": 1000,
+            "statusMessage": "Проверяю общие файлы Roblox-проекта"
+          }
+        ]
+      }
+    ]
+  }
+}

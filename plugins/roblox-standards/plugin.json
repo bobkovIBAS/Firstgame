@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "roblox-standards",
+  "version": "0.2.0",
+  "description": "Общие паттерны разработки Roblox: архитектура, интерфейсы, окружение, эффекты и проверка в Studio.",
+  "repository": "https://github.com/bobkovIBAS/Firstgame",
+  "keywords": ["roblox", "luau", "studio", "design-patterns"],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/roblox-init/SKILL.md",
+      "hooks": "./hooks/hooks.json",
+      "interface": {
+        "displayName": "Roblox Standards",
+        "shortDescription": "Общие паттерны разработки Roblox для команды",
+        "longDescription": "Переиспользуемые skills и документация для Roblox-проектов. Оформление и источник исходников определяются текущим проектом.",
+        "category": "Productivity"
+      }
+    }
+  }
+}
