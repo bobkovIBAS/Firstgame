@@ -1,0 +1,20 @@
+{
+  "name": "roblox-dev-kit",
+  "interface": {
+    "displayName": "Roblox Development Kit"
+  },
+  "plugins": [
+    {
+      "name": "roblox-standards",
+      "source": {
+        "source": "local",
+        "path": "./plugins/roblox-standards"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

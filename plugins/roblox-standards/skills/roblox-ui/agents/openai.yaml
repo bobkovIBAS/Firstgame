@@ -1,0 +1,4 @@
+interface:
+  display_name: "Roblox: интерфейсы"
+  short_description: "Окна и компоненты в стиле текущей игры"
+  default_prompt: "Используй $roblox-ui для изменения интерфейса в стиле текущего проекта."

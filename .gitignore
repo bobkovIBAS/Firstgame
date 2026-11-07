@@ -2,3 +2,5 @@
 *.rbxl.lock
 *.rbxlx.lock
 *.autosave
+__pycache__/
+*.pyc

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Roblox: окружение"
+  short_description: "Постройки и интерактивные модели Roblox"
+  default_prompt: "Используй $roblox-world для создания объекта окружения в стиле текущего мира."

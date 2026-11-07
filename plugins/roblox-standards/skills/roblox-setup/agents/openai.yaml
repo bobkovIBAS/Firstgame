@@ -1,0 +1,4 @@
+interface:
+  display_name: "Roblox: настройка проекта"
+  short_description: "Подключение стандартов и профиля проекта"
+  default_prompt: "Используй $roblox-setup, чтобы подключить общие стандарты к текущему Roblox-проекту."

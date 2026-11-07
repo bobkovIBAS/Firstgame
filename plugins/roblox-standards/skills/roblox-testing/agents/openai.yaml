@@ -1,0 +1,4 @@
+interface:
+  display_name: "Roblox: проверка"
+  short_description: "Проверка механик и результата в Studio"
+  default_prompt: "Используй $roblox-testing для проверки затронутого поведения в Roblox Studio."

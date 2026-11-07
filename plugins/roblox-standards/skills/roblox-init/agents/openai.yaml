@@ -1,0 +1,4 @@
+interface:
+  display_name: "Roblox: инициализация"
+  short_description: "Проверка и создание общих файлов проекта"
+  default_prompt: "Используй $roblox-init, чтобы проверить общие файлы проекта и создать недостающие."
