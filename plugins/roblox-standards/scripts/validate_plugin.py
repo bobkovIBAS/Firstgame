@@ -144,10 +144,21 @@ def validate(root, marketplace=None):
             relative = source.get("path", "")
             catalog_root = marketplace.parents[2]
             resolved = (catalog_root / relative).resolve()
-            if source.get("source") != "local" or not relative.startswith("./"):
-                raise ValueError("marketplace: expected a ./-prefixed local source")
-            if not inside(resolved, catalog_root) or resolved != root.resolve():
-                raise ValueError("marketplace: source path does not resolve to this plugin")
+            if not relative.startswith("./") or Path(relative).is_absolute() or ".." in Path(relative).parts:
+                raise ValueError("marketplace: expected a ./-prefixed path inside the source repository")
+            if source.get("source") == "local":
+                if not inside(resolved, catalog_root) or resolved != root.resolve():
+                    raise ValueError("marketplace: local source path does not resolve to this plugin")
+            elif source.get("source") == "git-subdir":
+                remote = urlsplit(source.get("url", ""))
+                if remote.scheme != "https" or not remote.hostname or remote.username or remote.password:
+                    raise ValueError("marketplace: expected an HTTPS Git URL without embedded credentials")
+                if source["url"].removesuffix(".git").rstrip("/") != manifest.get("repository", "").removesuffix(".git").rstrip("/"):
+                    raise ValueError("marketplace: Git source does not match the plugin repository")
+                if Path(relative).name != root.name:
+                    raise ValueError("marketplace: Git subdirectory does not match the plugin folder")
+            else:
+                raise ValueError("marketplace: expected a local or git-subdir source")
             policy = entry.get("policy", {})
             if not policy.get("installation") or not policy.get("authentication") or not entry.get("category"):
                 raise ValueError("marketplace: missing installation/authentication policy or category")

@@ -7,8 +7,10 @@
     {
       "name": "roblox-standards",
       "source": {
-        "source": "local",
-        "path": "./plugins/roblox-standards"
+        "source": "git-subdir",
+        "url": "https://github.com/bobkovIBAS/Firstgame.git",
+        "path": "./plugins/roblox-standards",
+        "ref": "main"
       },
       "policy": {
         "installation": "AVAILABLE",

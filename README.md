@@ -14,11 +14,14 @@
 После загрузки этих файлов на GitHub участники смогут подключить пакет:
 
 ```sh
-codex plugin marketplace add bobkovIBAS/Firstgame --ref main --sparse .agents/plugins --sparse plugins/roblox-standards
+codex plugin marketplace add bobkovIBAS/Firstgame --ref main
 codex plugin add roblox-standards@roblox-dev-kit
 ```
 
 Для локальной проверки из этой папки используйте `codex plugin marketplace add .`.
+Каталог использует `git-subdir`: устанавливаемая папка плагина берётся
+непосредственно из GitHub, поэтому её наличие рядом с копией marketplace
+не требуется. Изменения самого пакета станут доступны после push.
 
 ## Открыть проект
 
